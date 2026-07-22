@@ -39,8 +39,19 @@ body {
 	gap: 20px;
 }
 
-.nav-title {
-	/* margin: auto; */
+.navigation a {
+	text-decoration: none;
+	color: inherit;
+	padding: 6px 14px;
+	border-radius: 999px;
+	background: transparent;
+	border: 1px solid transparent;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.navigation a:hover {
+	background: var(--nord0);
+	border-color: var(--nord1);
 }
 
 .nav-logo {
