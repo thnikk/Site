@@ -86,7 +86,8 @@ body {
 	transition: background 0.15s, border-color 0.15s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
 	background: var(--nav-hover-bg);
 	border-color: var(--nav-hover-border);
 }
@@ -370,6 +371,70 @@ body {
 	.features {
 		flex-direction: column;
 		gap: 24px;
+	}
+
+	.title-lg {
+		font-size: 36px;
+	}
+
+	.title-md {
+		font-size: 24px;
+	}
+
+	.title-name {
+		font-size: 32px;
+	}
+
+	.nav-inner {
+		font-size: 18px;
+	}
+
+	.content {
+		gap: 20px;
+	}
+
+	.card-header {
+		padding: 16px 0 0 16px;
+	}
+
+	.features {
+		padding: 0 16px 16px;
+	}
+
+	.footer-inner {
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.avatar {
+		width: 100px;
+		height: 100px;
+	}
+
+	.hero-row {
+		gap: 16px;
+	}
+
+	.social-links {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.btn-tr {
+		padding: 12px;
+	}
+
+	.btn-tr:hover {
+		padding: 12px 16px;
+	}
+
+	.card {
+		border-radius: 0;
+	}
+
+	.footer {
+		border-radius: 0;
 	}
 }
 
