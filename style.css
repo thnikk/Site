@@ -71,20 +71,25 @@ body {
 	align-items: center;
 }
 
-.hero h1 {
+.title-lg {
 	font-size: 48px;
-	margin: 0;
 	font-weight: 300;
 }
 
-.hero p {
-	font-size: 20px;
-	margin: 10px 0 30px;
-	opacity: 0.7;
+.title-md {
+	font-size: 32px;
 	font-weight: 300;
+}
+
+.subtitle {
+	font-size: 20px;
+	font-weight: 300;
+	opacity: 0.7;
 }
 
 .btn {
+	position: relative;
+	isolation: isolate;
 	text-decoration: none;
 	color: var(--nord4);
 	background: var(--nord0);
@@ -92,22 +97,30 @@ body {
 	padding: 10px 24px;
 	border-radius: 999px;
 	font-size: 20px;
-	transition: background 0.15s, border-color 0.15s;
+	transition: border-color 0.15s;
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background: transparent;
+	transition: background 0.15s;
+	z-index: -1;
 }
 
 .btn:hover {
-	background: var(--nord1);
 	border-color: var(--nord2);
+}
+
+.btn:hover::before {
+	background: rgba(255, 255, 255, 0.15);
 }
 
 .btn-etsy {
 	color: var(--nord0);
 	background: var(--nord12);
-	border-color: rgba(46, 52, 64, 0.3);
-}
-
-.btn-etsy:hover {
-	background: #e0966a;
 	border-color: rgba(46, 52, 64, 0.3);
 }
 
@@ -117,22 +130,60 @@ body {
 	align-items: center;
 }
 
-.product h2 {
-	font-size: 32px;
-	margin: 0;
-	font-weight: 300;
+.product .subtitle {
+	margin-bottom: 30px;
 }
 
-.product p {
-	font-size: 18px;
-	margin: 8px 0 30px;
-	opacity: 0.7;
-	font-weight: 300;
+.hero .subtitle {
+	margin-bottom: 30px;
 }
 
-.product img {
+.product-image {
+	position: relative;
+	width: 100%;
+}
+
+.product-image img {
 	width: 100%;
 	display: block;
+}
+
+.btn-tr {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	translate: 0 -50%;
+	display: flex;
+	align-items: center;
+	gap: 0;
+	text-decoration: none;
+	border-radius: 999px 0 0 999px;
+	padding: 14px 16px;
+	font-size: 20px;
+	transition: gap 0.2s, padding 0.2s;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 100;
+}
+
+.btn-tr span {
+	max-width: 0;
+	overflow: hidden;
+	transition: max-width 0.2s;
+}
+
+.btn-tr:hover {
+	gap: 6px;
+	padding: 14px 20px;
+}
+
+.btn-tr:hover span {
+	max-width: 50px;
+}
+
+.btn-buy {
+	color: var(--nord0);
+	background: var(--nord14);
 }
 
 .nav-logo {
