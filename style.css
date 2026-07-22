@@ -5,7 +5,6 @@
 	--nord2: #434c5e;
 	--nord3: #4c566a;
 	--nord4: #d8dee9;
-	--fg: #d8dee9;
 	--nord5: #e5e9f0;
 	--nord6: #eceff4;
 	--nord7: #8fbcbb;
@@ -30,10 +29,7 @@ body {
 .navigation {
 	background: var(--nord-dark-bg);
 	font-size: 24px;
-	/* margin: 10px; */
 	padding: 10px;
-	/* border-radius: 20px; */
-	/* border: 1px solid rgba(255,255,255,0.1); */
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -60,7 +56,7 @@ body {
 }
 
 .logo-link:hover {
-	color: var(--nord9);
+	color: var(--nord6);
 }
 
 .nav-logo {
