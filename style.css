@@ -190,6 +190,46 @@ body {
 	margin-bottom: 30px;
 }
 
+.avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	background: var(--nord0);
+	border: 1px solid var(--nord1);
+}
+
+.hero-row {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 30px;
+}
+
+.title-name {
+	font-size: 48px;
+	font-weight: 600;
+}
+
+.bio {
+	max-width: 600px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.6;
+	opacity: 0.8;
+	margin-bottom: 30px;
+}
+
+.bio p {
+	margin: 0;
+}
+
+.social-links {
+	display: flex;
+	gap: 12px;
+}
+
 .product-image img {
 	width: 100%;
 	display: block;
