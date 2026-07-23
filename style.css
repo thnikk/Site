@@ -63,7 +63,11 @@ body {
 }
 
 .navigation {
-	background: var(--page-bg);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: color-mix(in srgb, var(--page-bg) 85%, transparent);
+	backdrop-filter: blur(8px);
 	padding: 10px;
 }
 
