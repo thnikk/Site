@@ -540,6 +540,7 @@ body {
 
 .nav-logo {
 	height: 40px;
+	margin: 0px 16px;
 	display: block;
 	fill: currentColor;
 }
