@@ -489,8 +489,8 @@ body {
 		display: none;
 		flex-direction: column;
 		flex-basis: 100%;
-		gap: 0;
-		/* margin-top: 8px; */
+		gap: 10px;
+		margin-top: 10px;
 		/* padding: 8px 0; */
 	}
 
@@ -502,9 +502,17 @@ body {
 		width: 100%;
 		box-sizing: border-box;
 		border-radius: 999px;
-		border: none;
 		padding: 12px 20px;
 		font-size: 18px;
+	}
+
+	a.nav-link {
+		border: 1px solid transparent;
+	}
+
+	a.nav-link:hover {
+		background: var(--btn-bg);
+		border-color: var(--btn-border);
 	}
 
 	.hamburger.open span:nth-child(1) {
