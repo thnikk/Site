@@ -385,6 +385,34 @@ body {
 	line-height: 1.5;
 }
 
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	margin-left: auto;
+	z-index: 101;
+}
+
+.hamburger span {
+	display: block;
+	width: 24px;
+	height: 2px;
+	background: var(--text);
+	border-radius: 2px;
+	transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
 @media (max-width: 999px) {
 	.features {
 		flex-direction: column;
@@ -448,6 +476,48 @@ body {
 	.footer {
 		border-radius: 0;
 	}
+
+	.nav-inner {
+		flex-wrap: wrap;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		flex-basis: 100%;
+		gap: 0;
+		/* margin-top: 8px; */
+		/* padding: 8px 0; */
+	}
+
+	.nav-links.open {
+		display: flex;
+	}
+
+	.nav-links .nav-link {
+		width: 100%;
+		box-sizing: border-box;
+		border-radius: 999px;
+		border: none;
+		padding: 12px 20px;
+		font-size: 18px;
+	}
+
+	.hamburger.open span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.hamburger.open span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.open span:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
 }
 
 .btn-buy {
@@ -462,7 +532,8 @@ body {
 
 .nav-logo {
 	height: 40px;
-	margin: 0 20px;
 	display: block;
 	fill: currentColor;
 }
+
+

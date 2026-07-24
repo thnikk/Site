@@ -29,5 +29,30 @@
 				});
 			});
 		});
+
+		var hamburger = document.querySelector('.hamburger');
+		var navLinks = document.querySelector('.nav-links');
+
+		if (hamburger && navLinks) {
+			hamburger.addEventListener('click', function(e) {
+				e.stopPropagation();
+				hamburger.classList.toggle('open');
+				navLinks.classList.toggle('open');
+			});
+
+			navLinks.querySelectorAll('.nav-link').forEach(function(link) {
+				link.addEventListener('click', function() {
+					hamburger.classList.remove('open');
+					navLinks.classList.remove('open');
+				});
+			});
+
+			document.addEventListener('click', function(e) {
+				if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+					hamburger.classList.remove('open');
+					navLinks.classList.remove('open');
+				}
+			});
+		}
 	});
 })();
